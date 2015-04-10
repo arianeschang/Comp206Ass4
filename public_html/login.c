@@ -56,7 +56,7 @@ int main(){
         if(strcmp(getfield(tmp2,3),pass)==0){
         found=1;
         free(tmp);
-        printf("<HTML> <meta http-equiv='Refresh' content='1; url=loginSuccess.html'></HTML>");
+        printf("<HTML><head><title>Welcome to MovMe!</title></head><body bgcolor='red' text='black'><h2> Share your favorite movies with your friends!</h2><h3> Login Successful!</h3><br><form action='MyFacebookPage.py' method='post'><br /><input type='hidden' name='user' value=%s><input type='submit' value='Access Your Feed'></form></HTML>",user);
       }
       }
       //printf("Usernames are %s\n", getfield(tmp, 2));
