@@ -122,7 +122,7 @@ message="""
               Welcome {2}!
            </li>
            <li style="float:left; padding:5px;">
-              <a href="http://www.cs.mcgill.ca/~hshin5" style="font-size:15px; float:left; display:block;" >
+              <a href="http://www.cs.mcgill.ca/~aschan" style="font-size:15px; float:left; display:block;" >
                 LogOut
               </a>
           </li>
@@ -134,6 +134,7 @@ message="""
          Share your ideas!
          <form action="MyFacebookPage.py" method="POST">
              Add Comments:<br />
+             <input type="hidden" name="user" value="{5}">
              <input type="text" name="comment">
              <input type="submit" value="submit">
          </form>
@@ -148,6 +149,7 @@ message="""
       <div id="Friends" style="flaot:left; background:#888; clear:both; margin:0 0 5px 0; padding:5px"><b>Friends</b>{3}</div>
       <div id="add" style="flaot:left; background:#888; clear:both;padding:5px"><b>Add Friends</b>
         <form action="MyFacebookPage.py" method="POST">
+           <input type="hidden" name="user" value="{4}">
            <input type="text" name="friend" size="12"><br />
            <input type="submit" value="Add">
          </form>
@@ -184,4 +186,4 @@ members = '<ul style="margin:0; list-style-type:none; padding:0"> <li>' + '</li>
 friends = find_friends(user_name)
 friends = '<ul style="margin:0; list-style-type:none; padding:0"> <li>' + '</li> <li>'.join(friends) + '</li> </ul>'
 print("content-type:text/html\n\n")
-print(message.format(post, members, user_name, friends))
+print(message.format(post, members, user_name, friends, user_name, user_name))
