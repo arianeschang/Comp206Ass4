@@ -4,8 +4,6 @@
 
  char* getfield(char* line, int num);
 
-
-
 int main(){
     printf("Content-type: text/html\n\n");
     char string[200];
